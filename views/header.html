@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<link rel="stylesheet" href="./public/css/bootstrap.css">
+	<link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+	<a href="" class="navbar-brand">Blog</a>
+	<ul class="nav navbar-nav">
+		<li class="active"><a href="./index.html">首页</a></li>
+		<% if(user){ %>
+		<li><a href="./reg.html"><%=user.user %></a></li>
+		<li><a href="./logout.html">退出</a></li>
+		<% }else{ %>
+		<li><a href="./reg.html">注册</a></li>
+		<li><a href="./login.html">登录</a></li>
+		<% } %>
+	</ul>
+</nav>
